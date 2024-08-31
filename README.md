@@ -1,4 +1,4 @@
-# ALtSchool Student Management System Project
+# AltSchool Student Management System Project
 
 This project features a StudentManagementClass that accessess and manipulates `Student`, `Instructor`, `Class` and `Enrollment`
 classes to create a management system. With this central class, an administrator can create students, instructors, courses, enrollments and add, remove or update their details. They can also get courses a student is enrolled in and students enrolled in a given course.
