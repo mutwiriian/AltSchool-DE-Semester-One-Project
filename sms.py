@@ -49,7 +49,7 @@ class Instructor(Person):
 
 class Course:
     def __init__(
-        self, course_name: str, course_id: str, enrolled_students: list[int] | None = []
+        self, course_name: str, course_id: str, enrolled_students: set[int] | None = set()
     ):
         """Initialize class attributes with arguments passed"""
         self.course_name = course_name
@@ -58,13 +58,13 @@ class Course:
 
     def add_student(self, student: Student):
         """Adds student to enrolled_students list"""
-        self.enrolled_students.append(student)
+        self.enrolled_students.add(student)
 
     def remove_student(self, student_id: int):
         """Remove student from enrolled_students list"""
         for student in self.enrolled_students:
             if student.id_number == student_id:
-                self.enrolled_students.remove(student)
+                self.enrolled_students.remove(set)
 
     def __str__(self):
         """Return string representation of Course attributes"""
@@ -197,7 +197,7 @@ class StudentManagementSystem:
             enrollment = Enrollment(student=student, course=course)
             self.enrollments.append(enrollment)
 
-            course.enrolled_students.append(student.id_number)
+            course.enrolled_students.add(student_id)
 
     def assign_grade(self, grade: str, student_id: int, course_id: int):
         """Assign a grade to course a given student is taking"""
@@ -210,12 +210,12 @@ class StudentManagementSystem:
 
     def get_students_in_course(self, course_id: int):
         """Extract students enrolled in a course"""
-        students = []
+        students = set()
         course = self.get_course(course_id=course_id)
 
         for student_id in course.enrolled_students:
             student = self.get_student(id_number=student_id)
-            students.append(student)
+            students.add(student)
         return students
 
     def get_courses_for_student(self, student_id: int):
@@ -270,13 +270,13 @@ system.enroll_student(5443, 107)
 
 # Assign grades to students
 system.assign_grade("a", 6444, 100)
-system.assign_grade("b", 6444, 100)
-system.assign_grade("d", 6444, 100)
-system.assign_grade("b", 5493, 103)
+system.assign_grade("b", 5493, 100)
+system.assign_grade("d", 5453, 100)
+system.assign_grade("b", 6444, 103)
 system.assign_grade("c", 5493, 103)
-system.assign_grade("a", 5493, 103)
-system.assign_grade("d", 5453, 107)
-system.assign_grade("b", 5453, 107)
+system.assign_grade("a", 5453, 103)
+system.assign_grade("d", 6444, 107)
+system.assign_grade("b", 5493, 107)
 system.assign_grade("c", 5453, 107)
 
 # Create instructors
