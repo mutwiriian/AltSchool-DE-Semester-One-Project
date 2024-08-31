@@ -5,8 +5,8 @@ classes to create a management system. With this central class, an administrator
 
 This project was built on Python 3.12 and does not require libraries outside of the standard library. 
 To test the project run:
-##
-`python sms.py` on Windows and
+#
+`python sms.py` on Windows
 
-## 
+#
 `python3 sms.py` on a Linux machine.
