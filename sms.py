@@ -64,7 +64,7 @@ class Course:
         """Remove student from enrolled_students list"""
         for student in self.enrolled_students:
             if student.id_number == student_id:
-                self.enrolled_students.remove(set)
+                self.enrolled_students.remove(student)
 
     def __str__(self):
         """Return string representation of Course attributes"""
