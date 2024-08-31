@@ -298,7 +298,7 @@ for instructor in system.instructors:
 # Get students' enrolled in a course
 print("\nStudents")
 print("-" * 20)
-students_in_biology = system.get_students_in_course(103)
+students_in_biology = system.get_students_in_course(103) # 100 - Mathematics | 107 - Geography
 
 for student in students_in_biology:
     print(student.__str__())
@@ -306,7 +306,7 @@ for student in students_in_biology:
 # Get courses a student is enrolled in
 print("\nCourses")
 print("-" * 20)
-ian_courses = system.get_courses_for_student(6444)
+ian_courses = system.get_courses_for_student(6444) # 5443 - imma | 5493 - lucky
 
 for course in ian_courses:
     print(course.__str__())
