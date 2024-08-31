@@ -1,11 +1,12 @@
 """
 This module creates a student management system that is
-composed Student and Instructor classes, which inherit their properties
-from the Person class, a Course class and an Enrollment class.
+composed of Student and Instructor classes, which inherit their properties
+from the Person class, a Course class. The Enrollment class tracks student
+membership in courses and their grades.
 
-The management class combines properties and methods in the of these classes
+The StudentManagementClass class combines properties and methods in each of these classes
 to implement its functionalities like creating students, removing course,
-assigning grades ...
+assigning grades, ...
 """
 
 
